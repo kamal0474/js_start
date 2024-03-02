@@ -47,9 +47,46 @@ if(debitc || creditc) {     // or condition dono mein se koi bhi theek hogi tio 
 }
 //************switch********************/
 // syntax
-switch (key) {
-    case value:
+const month =1
+switch (month) {
+    case 1:
+        console.log('jan')
         break;
+        case 2:
+            console.log('feb')
+            break;
+            case 3:
+                console.log('mar')
+                break;
+                case 4:
+                    console.log('apr')
+                    break;
         default:
+            console.log('default case')
             break;
 }
+// break nhi use krenge to aage ke bhi execute ho jaenge, aur default vala nhi hota executeunless koi cind math na ho 
+// ******************************************
+// truthy and falsy value
+//FV => false, 0, -0, BigInt, "", null, undefined, NaN
+//TV => "0", 'false', " ", [], {}, function(){}
+ const empobj ={}
+ if(Object.keys(empobj).length === 0) {
+    console.log("empty obj")
+ }
+
+ //nullish coalescing operator(??) : null undefined 
+  let val;
+  let val1;
+  let val2;
+  val = 5 ?? 10       // jo phele assign hai vo aa jaega
+  val1 = null ?? 10    //isme null aa skta tha pr isme aage value di hui thi to 10 aa gya vrna null hi aana tha.
+  val2 = undefined ?? 2   
+  console.log(val, val1, val2)
+
+
+  // terninary op 
+  const icecream =30
+  icecream >=50 ? console.log("greater than 50") : console.log("less than 50")
+
+  
