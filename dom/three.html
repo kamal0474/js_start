@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3</title>
+</head>
+<body style ="background-color: plum; color:antiquewhite">
+    
+</body>
+<script>
+    const dive= document.createElement('div')
+    console.log(dive);
+    dive.className = "main"
+    dive.id = Math.round(Math.random() * 10 + 1)
+    dive.setAttribute("title", "generated it")
+    dive.style.color= "maroon"
+    dive.style.pading = "10px"
+    //dive.innerText ="hello ji"
+    const add= document.createTextNode("Hellio Ji")
+    dive.appendChild(add)
+    document.body.appendChild(dive)    // add krne ke liye use krte hai
+
+</script>
+</html>
