@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4</title>
+</head>
+<body style ="background-color: burlywood;color : brown">
+    <ul class="lang">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlang(langname) {
+    const add = document.createElement('li')
+    add.innerHTML = `${langname}`
+    document.querySelector('.lang').
+    appendChild(add)
+    }
+    //addlang("python")
+
+    function addoptilang(langname) {
+    const add = document.createElement('li')
+    add.appendChild(document.createTextNode(langname))
+    document.querySelector('.lang').appendChild(add)
+    }
+    addoptilang("python")
+    addoptilang("c++")
+    addoptilang("ruby")
+
+    //edit
+    const seclang = document.querySelector("li:nth-child(2)")
+    //seclang.innerHTML = 'java'
+    const newli = document.createElement('li')
+    newli.textContent = "java"
+    seclang.replaceWith(newli)
+
+    const firlang = document.querySelector("li:first-child")
+    firlang.outerHTML = '<li>Perl</li>'
+
+    //remove
+     const llang = document.querySelector('li:last-child')
+     llang.remove()
+</script>
+</html>
