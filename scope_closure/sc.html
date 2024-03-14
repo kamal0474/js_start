@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure & Scope</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //lexical scoping
+function init(){
+    let name = "kd";
+    function displayNmae() {
+        console.log(name);
+    }
+    displayNmae();
+}
+init();
+
+function outer() {
+    let usname = "kamaldeep"
+    function inner() {
+        let seceret = "123"
+        console.log("inner",usname)
+    }
+    function inner2 () {
+        console.log("inner2", usname)
+        console.log(seceret)
+    }
+    inner()
+    inner2()
+}
+outer()
+console.log("aane va",usname)
+//outer function ke ander koi agr inner function bnenge to outer ke sare functions inner ko mil jaenge pr agar 2 fun bne hai to vo do share nhi krenge apni properties.
+
+// closure
+// isme puri memory jati hai mtlb pura lexical scope jata hai pura
+//function return krte hai to sirf fun nhi return hota pura uska lexical scope return hota hai
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</html>
